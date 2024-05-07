@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="d1"></div>
+        
+        <script type="text/babel">
+               var students = [
+        {
+          firstname:"Praveen",
+          lastname:"Gubbala",
+          age:40,
+          gender:"male"
+        },
+        {
+          firstname:"Smrithi",
+          lastname:"mandana",
+          age:25,
+          gender:'female'
+        },
+        {
+          firstname:"mithali",
+          lastname:"raj",
+          age:39,
+          gender:'female'
+        },
+        {
+          firstname:"Rohit",
+          lastname:"Sharma",
+          age:35,
+          gender:'male'
+        },
+        {
+          firstname:"Sachin",
+          lastname:"Tendulkar",
+          age:50,
+          gender:'male'
+        },
+    ]
+       var maleimg="https://png.pngtree.com/thumb_back/fh260/background/20230630/pngtree-3d-illustrated-character-cartoon-male-image_3703244.jpg" 
+       var femaleimg="https://c1912z2808.r-cdn.com/blog/margo-gru-cute-female-cartoon-character.webp"
+
+    var v=<div style={{display:"flex"}}>
+        {
+            students.map(function(a){
+               return <div style={{border:"2px solid", padding:"10px",margin:"10px"}}>
+                <div style={a.gender=="male"?{backgroundColor:"skyblue"}:{backgroundColor:"pink"}}>
+                <h2>firstname:{a.firstname}</h2>
+                          <h2>lastname:{a.lastname}</h2>
+                          <h2>age:{a.age}</h2>
+                          <h2>gender:{a.gender}</h2>
+                        
+                            
+                        
+
+                        </div>
+                        <div>
+                            <div><img src={a.gender=="male"?maleimg:femaleimg} width="100%"/></div>
+                            
+                            
+                            </div>
+
+                
+                    </div>
+
+            })
+
+
+
+    }
+        
+        </div>
+                ReactDOM.render(v,document.getElementById("d1"))
+
+
+      </script>
+      </body>
+      </html>
